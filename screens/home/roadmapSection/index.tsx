@@ -63,6 +63,7 @@ const RoadmapSection = ({
         <source media="(min-width:768px)" srcSet="/images/roadmap-bg.png" />
         <img className="w-full" src="/images/roadmap-bg-mobile.png" alt="roadmap-bg" />
       </picture>
+      <div className={styles['roadmapSection-transition']} />
       <div className="absolute left-1/2 -translate-x-1/2 top-[57px] w-full">
         <div className="overflow-hidden">
           <h3 className="text-xl md:text-3xl font-extrabold text-center text-white">
