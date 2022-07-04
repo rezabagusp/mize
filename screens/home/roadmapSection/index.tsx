@@ -37,10 +37,14 @@ const RoadmapSection = ({
       loop: true,
       breakpoints: {
         768: {
-          slidesPerView: 4,
+          slidesPerView: 2.5,
           centeredSlides: false,
           autoplay: false,
           loop: false,
+        },
+        1024: {
+          slidesPerView: 4,
+          centeredSlides: false,
         },
       },
     } as SwiperOptions;
