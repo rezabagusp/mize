@@ -13,8 +13,6 @@ import { ROADMAPS } from './config';
 import styles from './index.module.css';
 
 Swiper.use([Autoplay, Pagination, Lazy]);
-// TODO
-// - swiper roadmap card
 
 interface Props {
   className?: string,
