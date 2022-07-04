@@ -1,0 +1,17 @@
+html,
+body {
+  font-family: "PPObjectSans", "Arial", "open sans", "helvetica neue", "sans-serif";
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+input:focus, textarea:focus, select:focus{
+  outline: none;
+}
+input::placeholder,
+textarea::placeholder {
+  @apply text-neutral-80;
+}
