@@ -31,7 +31,7 @@ module.exports = {
           main: '#E87F02',
         },
         blue: {
-          main: '#114189',
+          secondary: '#24A3D9',
         },
         neutral: {
           10: '#FEFFFF',

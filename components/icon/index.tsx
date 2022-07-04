@@ -4,7 +4,8 @@ import icons from './svg';
 import styles from './index.module.css';
 
 interface Props {
-  icon: 'discord' | 'instagram' | 'telegram' | 'twitter' | 'hamburgerMenu',
+  icon: 'discord' | 'instagram' | 'telegram' | 'twitter' | 'hamburgerMenu'
+   | 'medium' | 'close',
   /**
    * if size provided, height & width props will be avoided
    */

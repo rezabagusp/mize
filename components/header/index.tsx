@@ -1,14 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import cn from 'classnames';
 
 import Icon from '../icon';
 import LinkWrapper from '../link';
+import SocialMedia from '../socialMedia';
+
 import { NAV_MENU } from './config';
+import ModalNavMobile from './modalNavMobile';
 import styles from './index.module.css';
 
 // TODO:
-// - mobile nav
-// - social share component
+// - react scroll nav
+
 interface Props {
   className?: string,
 }
@@ -16,6 +19,8 @@ interface Props {
 const Header = ({
   className,
 }: Props) => {
+  const [showNavMobile, setShowNavMobile] = useState(false);
+
   const renderDesktopNavMenu = () => (
     <ul className="flex">
       {
@@ -26,6 +31,7 @@ const Header = ({
             <li
               className={cn(
                 idx !== 0 && 'ml-6',
+                'uppercase text-xs',
               )}
               key={key}
             >
@@ -41,39 +47,48 @@ const Header = ({
 
   return (
     <div className={cn(className)}>
+      {/* // mobile nav modal */}
+      {
+        showNavMobile && (
+          <ModalNavMobile
+            onClose={() => setShowNavMobile(false)}
+          />
+        )
+      }
       <div className="relative">
         <div className={cn(
           styles['header-bar'],
-          'text-white py-6',
+          'text-white py-4',
           'md:justify-between',
         )}
         >
-          <div className="max-w-screen-xl mx-auto">
-            <div className="flex items-center justify-center">
+          <div className="max-w-screen-lg mx-auto md:px-4">
+            <div className="flex items-center justify-center md:justify-between">
 
               <Icon
                 className="absolute top-[21px] left-[16px] md:hidden"
                 icon="hamburgerMenu"
                 size={25}
+                onClick={() => setShowNavMobile(true)}
               />
-              <img
-                src="/images/cosmize-logo.png"
-                alt="cosmize-logo"
-                width={114}
-                height={25}
-              />
+              <LinkWrapper
+                className="block"
+                href="/"
+              >
+                <img
+                  src="/images/cosmize-logo.png"
+                  alt="cosmize-logo"
+                  width={114}
+                  height={25}
+                />
+              </LinkWrapper>
               {/* desktop nav */}
               <div className="hidden md:block">
                 {renderDesktopNavMenu()}
               </div>
               {/* social share icons */}
               <div className="hidden md:block">
-                <div className="flex">
-                  medium
-                  twitter
-                  telegram
-                  discord
-                </div>
+                <SocialMedia />
               </div>
 
             </div>

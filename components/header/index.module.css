@@ -1,5 +1,5 @@
 .header-bar {
-  /* background: rgba(36, 163, 217, 0.1); */
+  /* background: rgba(36, 163, 217, 0.9); */
   background-color: aqua;
   backdrop-filter: blur(50px);
 }

@@ -53,7 +53,7 @@ const ModalBase: FunctionComponent<Props> = ({ className, children, onClose }) =
         className="fixed top-0 left-0 w-full h-full"
         onClick={handleClose}
       />
-      <div className={cn('relative max-w-md mx-auto', className)}>
+      <div className={cn('relative mx-auto', className)}>
         {children}
       </div>
     </div>
