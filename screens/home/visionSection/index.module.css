@@ -1,0 +1,5 @@
+.visionSection {
+  @apply text-center text-white;
+  @apply py-10 px-4;
+  background: linear-gradient(180deg, #61C8F7 0%, #0CA0FF 100%);
+}

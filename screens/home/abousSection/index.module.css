@@ -1,0 +1,5 @@
+.aboutSection {
+  @apply text-center text-white;
+  @apply py-10 px-4;
+  background: linear-gradient(180deg, #165E8C 0%, #61C8F7 100%);  
+}

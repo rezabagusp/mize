@@ -10,7 +10,7 @@ const AppLayout = ({
 }: Props) => (
   <>
     <Header className="fixed top-0 w-full z-30" />
-    <main>{children}</main>
+    <main className="pt-20">{children}</main>
     {/* footer */}
   </>
 );

@@ -1,0 +1,10 @@
+.roadmapSection {
+  background: radial-gradient(98.28% 119.95% at 50% 119.95%, rgba(21, 93, 139, 0) 0%, #155D8B 100%);
+  padding-bottom: 141%;
+}
+
+@media (min-width: 768px) {
+  .roadmapSection {
+    padding-bottom: 57.01%;
+  }
+}
