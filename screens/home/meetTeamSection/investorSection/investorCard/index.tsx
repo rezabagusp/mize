@@ -23,6 +23,7 @@ const InvestorCard = ({
       width={investor.width}
       height={investor.height}
       alt={investor.caption}
+      title={investor.caption}
     />
   </div>
 );

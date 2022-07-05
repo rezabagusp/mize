@@ -1,5 +1,27 @@
-.header-bar {
-  /* background: rgba(36, 163, 217, 0.9); */
-  background-color: aqua;
+.headerBar {
+  background: rgba(36, 163, 217, 0.1);
   backdrop-filter: blur(50px);
+}
+
+.headerBar-nav {
+  @apply block;
+  @apply relative;
+  @apply p-4;
+}
+
+.headerBar-nav:hover {
+  @apply font-bold;
+  @apply no-underline text-[#FF9C41];
+}
+
+.headerBar-nav:hover::after {
+  display: block;
+}
+
+.headerBar-nav:after {
+  content: '';
+  @apply hidden;
+  @apply absolute bottom-[6px] left-0;
+  @apply w-full h-[2px];
+  @apply bg-[#FF9C41];
 }

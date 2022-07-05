@@ -1,4 +1,5 @@
 import React from 'react';
+import { Element } from 'react-scroll';
 
 import VisionSection from './visionSection';
 import AboutSection from './abousSection';
@@ -8,10 +9,16 @@ import MeetTeamSection from './meetTeamSection';
 
 const HomeScreen = () => (
   <>
-    <AboutSection />
+    <Element name="#about">
+      <AboutSection />
+    </Element>
     <VisionSection />
-    <ConceptSection />
-    <RoadmapSection />
+    <Element name="#concept">
+      <ConceptSection />
+    </Element>
+    <Element name="#roadmap">
+      <RoadmapSection />
+    </Element>
     <MeetTeamSection />
   </>
 );

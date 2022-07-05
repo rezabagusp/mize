@@ -1,7 +1,7 @@
 import React from 'react';
 import cn from 'classnames';
+import { Link } from 'react-scroll';
 
-import LinkWrapper from '../../link';
 import ModalBase from '../../modal';
 import { NAV_MENU } from '../config';
 import SocialMedia from '../../socialMedia';
@@ -28,12 +28,18 @@ const ModalNavMobile = ({
               )}
               key={key}
             >
-              <LinkWrapper
-                className="block py-1 hover:no-underline"
-                href={menu.href}
+              <Link
+                className={cn(
+                  'cursor-pointer block py-1 hover:no-underline',
+                )}
+                to={menu.href}
+                smooth
+                offset={-30}
+                duration={500}
+                onClick={() => onClose()}
               >
                 {menu.label}
-              </LinkWrapper>
+              </Link>
             </li>
           );
         })
@@ -45,6 +51,7 @@ const ModalNavMobile = ({
     <ModalBase
       className="top-0"
       onClose={onClose}
+      bodyHidden={false}
     >
       <div className="p-8 pt-16 bg-blue-secondary text-white">
         <div className="max-w-sm mx-auto">

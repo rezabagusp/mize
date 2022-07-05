@@ -10,9 +10,15 @@ type Props = {
   className?: string,
   children: ReactNode,
   onClose?: () => void,
+  bodyHidden?: boolean,
 };
 
-const ModalBase: FunctionComponent<Props> = ({ className, children, onClose }) => {
+const ModalBase: FunctionComponent<Props> = ({
+  className,
+  children,
+  onClose,
+  bodyHidden = true,
+}) => {
   const handleKeyDown = useCallback((e): void => {
     if (e.key === 'Escape' || e.keyCode === 27) {
       if (onClose) {
@@ -23,12 +29,16 @@ const ModalBase: FunctionComponent<Props> = ({ className, children, onClose }) =
 
   useEffect((): () => void => {
     const body = document.body;
-    if (body) body.classList.add('overflow-hidden');
+    if (bodyHidden) {
+      if (body) body.classList.add('overflow-hidden');
+    }
 
     return () => {
-      if (body) body.classList.remove('overflow-hidden');
+      if (bodyHidden) {
+        if (body) body.classList.remove('overflow-hidden');
+      }
     };
-  }, []);
+  }, [bodyHidden]);
 
   useEffect(() => {
     if (onClose != null) document.addEventListener('keydown', handleKeyDown, true);
@@ -47,7 +57,7 @@ const ModalBase: FunctionComponent<Props> = ({ className, children, onClose }) =
 
   return (
     <div
-      className="z-20 fixed top-0 left-0 right-0 w-full h-screen overflow-y-scroll bg-neutral-80 bg-opacity-80"
+      className="z-20 fixed top-0 left-0 right-0 w-full h-screen overflow-y-scroll bg-black bg-opacity-60"
     >
       <div
         className="fixed top-0 left-0 w-full h-full"
