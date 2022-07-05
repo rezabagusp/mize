@@ -66,18 +66,19 @@ const FooterOverlay = ({
       className,
     )}
     >
-      <LinkWrapper
-        className="block"
-        href="/"
-      >
-        <img
-          className="mx-auto w-[165px] md:w-[255px]"
-          src="/images/cosmize-logo-secondary.png"
-          alt="cosmize-logo"
-          width={255}
-          height={40}
-        />
-      </LinkWrapper>
+      <div className="flex justify-center items-center">
+        <LinkWrapper
+          href="/"
+        >
+          <img
+            className="mx-auto w-[165px] md:w-[255px]"
+            src="/images/cosmize-logo-secondary.png"
+            alt="cosmize-logo"
+            width={255}
+            height={40}
+          />
+        </LinkWrapper>
+      </div>
       {renderNav()}
       <hr className="bg-[#C2D1D9] my-2" />
       <p className="text-white text-sm text-center">
