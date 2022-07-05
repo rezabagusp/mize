@@ -1,7 +1,6 @@
-# Bangun.app - marketing site
+# # Comize - landing
 
-Marketing site for Bangun.app<br/>
-This App is built using NextJS.
+Cosmize landing site. This App is built using NextJS.
 
 ## Requirement
 You will need `git` and `Node.js` installed in your computer.
