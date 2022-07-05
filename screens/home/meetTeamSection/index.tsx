@@ -1,5 +1,6 @@
 import React from 'react';
 import cn from 'classnames';
+import { Element } from 'react-scroll';
 
 import TeamCard from './teamCard';
 import InvestorSection from './investorSection';
@@ -69,32 +70,37 @@ const MeetTeamSection = ({
     <FooterOverlay
       className="absolute bottom-0 left-0"
     />
+
     <div className="absolute left-1/2 -translate-x-1/2 top-0 w-full">
       <div className={styles['meetTeamSection-transition']} />
-      <h3 className="text-xl md:text-3xl font-extrabold text-center text-white">
-        MEET THE TEAM
-      </h3>
-      <div className="grid grid-cols-2 gap-4 px-4 mt-8 md:mt-16 md:grid-cols-4 md:gap-6">
-        {
-          TEAMS.map((team) => {
-            const key = team.name;
+      <Element name="#team">
+        <h3 className="text-xl md:text-3xl font-extrabold text-center text-white">
+          MEET THE TEAM
+        </h3>
+        <div className="grid grid-cols-2 gap-4 px-4 mt-8 md:mt-16 md:grid-cols-4 md:gap-6">
+          {
+            TEAMS.map((team) => {
+              const key = team.name;
 
-            return (
-              <TeamCard
-                key={key}
-                name={team.name}
-                photoUrl={team.photo}
-                position={team.postion}
-              />
-            );
-          })
-        }
-      </div>
+              return (
+                <TeamCard
+                  key={key}
+                  name={team.name}
+                  photoUrl={team.photo}
+                  position={team.postion}
+                />
+              );
+            })
+          }
+        </div>
+      </Element>
 
       {/* investor section */}
-      <InvestorSection
-        className="mt-16 lg:mt-24"
-      />
+      <Element name="#investors">
+        <InvestorSection
+          className="mt-16 lg:mt-24"
+        />
+      </Element>
     </div>
   </div>
 );

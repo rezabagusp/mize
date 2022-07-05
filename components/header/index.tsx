@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import cn from 'classnames';
+import { Link } from 'react-scroll';
 
 import Icon from '../icon';
 import LinkWrapper from '../link';
@@ -22,22 +23,30 @@ const Header = ({
   const [showNavMobile, setShowNavMobile] = useState(false);
 
   const renderDesktopNavMenu = () => (
-    <ul className="flex">
+    <ul className="flex justify-center">
       {
-        NAV_MENU.map((menu, idx) => {
+        NAV_MENU.map((menu) => {
           const key = menu.href;
 
           return (
             <li
               className={cn(
-                idx !== 0 && 'ml-6',
                 'uppercase text-xs',
               )}
               key={key}
             >
-              <LinkWrapper href={menu.href}>
+              <Link
+                className={cn(
+                  'cursor-pointer',
+                  styles['headerBar-nav'],
+                )}
+                to={menu.href}
+                smooth
+                offset={-100}
+                duration={500}
+              >
                 {menu.label}
-              </LinkWrapper>
+              </Link>
             </li>
           );
         })
@@ -57,7 +66,7 @@ const Header = ({
       }
       <div className="relative">
         <div className={cn(
-          styles['header-bar'],
+          styles.headerBar,
           'text-white py-4',
           'md:justify-between',
         )}
@@ -65,12 +74,14 @@ const Header = ({
           <div className="max-w-screen-lg mx-auto md:px-4">
             <div className="flex items-center justify-center md:justify-between">
 
-              <Icon
-                className="absolute top-[21px] left-[16px] md:hidden"
-                icon="hamburgerMenu"
-                size={25}
-                onClick={() => setShowNavMobile(true)}
-              />
+              <div className="md:hidden">
+                <Icon
+                  className="absolute top-[21px] left-[16px]"
+                  icon="hamburgerMenu"
+                  size={25}
+                  onClick={() => setShowNavMobile(true)}
+                />
+              </div>
               <LinkWrapper
                 className="block"
                 href="/"
