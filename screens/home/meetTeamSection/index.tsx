@@ -3,6 +3,7 @@ import cn from 'classnames';
 
 import TeamCard from './teamCard';
 import InvestorSection from './investorSection';
+import FooterOverlay from './footerOverlay';
 import styles from './index.module.css';
 
 const TEAMS = [
@@ -65,6 +66,9 @@ const MeetTeamSection = ({
       <source media="(min-width:768px)" srcSet="/images/team-bg.png" />
       <img className="w-full" src="/images/team-bg-mobile.png" alt="team-bg" />
     </picture>
+    <FooterOverlay
+      className="absolute bottom-0 left-0"
+    />
     <div className="absolute left-1/2 -translate-x-1/2 top-0 w-full">
       <div className={styles['meetTeamSection-transition']} />
       <h3 className="text-xl md:text-3xl font-extrabold text-center text-white">
