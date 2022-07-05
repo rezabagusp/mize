@@ -13,7 +13,7 @@ const InvestorCard = ({
   investor,
 }: Props) => (
   <div className={cn(
-    'rounded-2xl bg-white p-4 flex justify-center items-center h-[64px] md:h-[160px] md:min-w-[160px]',
+    'rounded-2xl bg-white p-4 flex justify-center items-center h-[64px] md:h-[120px] md:min-w-[120px]',
     className,
   )}
   >

@@ -93,7 +93,7 @@ const MeetTeamSection = ({
 
       {/* investor section */}
       <InvestorSection
-        className="mt-24"
+        className="mt-16 lg:mt-24"
       />
     </div>
   </div>
