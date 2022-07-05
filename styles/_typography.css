@@ -1,6 +1,7 @@
 html,
 body {
   font-family: "PPObjectSans", "Arial", "open sans", "helvetica neue", "sans-serif";
+  @apply max-w-screen-2xl mx-auto;
 }
 a {
   text-decoration: none;

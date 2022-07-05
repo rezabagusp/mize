@@ -59,7 +59,7 @@ const RoadmapSection = ({
       className,
     )}
     >
-      <picture className="absolute top-0 left-0">
+      <picture className="absolute top-0 left-0 min-w-full">
         <source media="(min-width:768px)" srcSet="/images/roadmap-bg.png" />
         <img className="w-full" src="/images/roadmap-bg-mobile.png" alt="roadmap-bg" />
       </picture>
