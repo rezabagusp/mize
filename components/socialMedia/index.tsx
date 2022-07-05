@@ -51,6 +51,7 @@ const SocialMedia = ({
           href={social.href}
           target="_blank"
           rel="noreferrer"
+          title={social.icon}
         >
           <Icon
             icon={social.icon}
