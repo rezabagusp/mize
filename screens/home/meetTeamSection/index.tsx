@@ -72,8 +72,8 @@ const MeetTeamSection = ({
     />
 
     <div className="absolute left-1/2 -translate-x-1/2 top-0 w-full">
-      <div className={styles['meetTeamSection-transition']} />
       <Element name="#team">
+        <div className={styles['meetTeamSection-transition']} />
         <h3 className="text-xl md:text-3xl font-extrabold text-center text-white">
           MEET THE TEAM
         </h3>

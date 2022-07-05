@@ -1,5 +1,6 @@
 import React from 'react';
 import cn from 'classnames';
+import { Link } from 'react-scroll';
 
 import LinkWrapper from '../../../../components/link';
 
@@ -46,11 +47,15 @@ const FooterOverlay = ({
               key={key}
               className="uppercase text-xs"
             >
-              <LinkWrapper
-                href={nav.href}
+              <Link
+                className="cursor-pointer"
+                to={nav.href}
+                smooth
+                offset={-30}
+                duration={500}
               >
                 {nav.label}
-              </LinkWrapper>
+              </Link>
             </div>
           );
         })

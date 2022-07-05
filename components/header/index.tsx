@@ -10,9 +10,6 @@ import { NAV_MENU } from './config';
 import ModalNavMobile from './modalNavMobile';
 import styles from './index.module.css';
 
-// TODO:
-// - react scroll nav
-
 interface Props {
   className?: string,
 }
@@ -42,7 +39,7 @@ const Header = ({
                 )}
                 to={menu.href}
                 smooth
-                offset={-100}
+                offset={-50}
                 duration={500}
               >
                 {menu.label}
