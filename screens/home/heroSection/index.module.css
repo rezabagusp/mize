@@ -1,0 +1,9 @@
+.heroSection {
+  padding-bottom: 177.77%;
+}
+
+@media (min-width: 768px) {
+  .heroSection {
+    padding-bottom: 56.25%;
+  }
+}
