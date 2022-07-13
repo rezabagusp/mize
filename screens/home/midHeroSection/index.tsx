@@ -39,7 +39,7 @@ const MidHeroSection = ({
           icon="close"
           onClick={() => setShowTeaserDialog(false)}
         />
-        <video autoPlay controls>
+        <video autoPlay controls className="w-full">
           <source
             id="hvid"
             src="/video/video-teaser.mp4"
