@@ -17,20 +17,19 @@ const ModalNavMobile = ({
   const renderNav = () => (
     <ul>
       {
-        NAV_MENU.map((menu, idx) => {
+        NAV_MENU.map((menu) => {
           const key = menu.href;
 
           return (
             <li
               className={cn(
-                idx !== 0 && 'mt-3',
                 'uppercase text-xs',
               )}
               key={key}
             >
               <Link
                 className={cn(
-                  'cursor-pointer block py-1 hover:no-underline',
+                  'cursor-pointer block hover:no-underline py-2',
                 )}
                 to={menu.href}
                 smooth
