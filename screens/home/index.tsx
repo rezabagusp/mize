@@ -6,9 +6,11 @@ import AboutSection from './abousSection';
 import ConceptSection from './conceptSection';
 import RoadmapSection from './roadmapSection';
 import MeetTeamSection from './meetTeamSection';
+import HeroSection from './heroSection';
 
 const HomeScreen = () => (
   <>
+    <HeroSection />
     <Element name="#about">
       <AboutSection />
     </Element>
