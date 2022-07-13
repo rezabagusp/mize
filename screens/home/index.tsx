@@ -7,6 +7,7 @@ import ConceptSection from './conceptSection';
 import RoadmapSection from './roadmapSection';
 import MeetTeamSection from './meetTeamSection';
 import HeroSection from './heroSection';
+import MidHeroSection from './midHeroSection';
 
 const HomeScreen = () => (
   <>
@@ -14,6 +15,7 @@ const HomeScreen = () => (
     <Element name="#about">
       <AboutSection />
     </Element>
+    <MidHeroSection />
     <VisionSection />
     <Element name="#concept">
       <ConceptSection />

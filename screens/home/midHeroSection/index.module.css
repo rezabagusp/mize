@@ -1,0 +1,25 @@
+.midHeroSection {
+  padding-bottom: 177.77%;
+}
+
+.midHeroSection-transition {
+  width: 100%;;
+  height: 79px;
+  @apply absolute left-0;
+}
+
+.midHeroSection-transition--bottom {
+  background: linear-gradient(180deg, rgba(97, 200, 247, 0) 0%, #61C8F7 100%);
+  @apply bottom-0;
+}
+
+.midHeroSection-transition--top {
+  background: linear-gradient(180deg, #61C8F7 0%, rgba(97, 200, 247, 0) 100%);
+  @apply top-0;
+}
+
+@media (min-width: 768px) {
+  .midHeroSection {
+    padding-bottom: 56.25%;
+  }
+}

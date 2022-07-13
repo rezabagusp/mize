@@ -5,7 +5,7 @@ import styles from './index.module.css';
 
 interface Props {
   icon: 'discord' | 'instagram' | 'telegram' | 'twitter' | 'hamburgerMenu'
-   | 'medium' | 'close',
+   | 'medium' | 'close' | 'playButton',
   /**
    * if size provided, height & width props will be avoided
    */
