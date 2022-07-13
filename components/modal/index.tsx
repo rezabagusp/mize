@@ -57,7 +57,7 @@ const ModalBase: FunctionComponent<Props> = ({
 
   return (
     <div
-      className="z-20 fixed top-0 left-0 right-0 w-full h-screen overflow-y-scroll bg-black bg-opacity-60"
+      className="z-50 fixed top-0 left-0 right-0 w-full h-screen overflow-y-scroll bg-black bg-opacity-60"
     >
       <div
         className="fixed top-0 left-0 w-full h-full"
